@@ -1,0 +1,21 @@
+Este repositorio contiene un script de automatización para la instalación y configuración de un servidor DNS en Ubuntu Server utilizando BIND9. Está diseñado para simplificar la creación de una zona de búsqueda directa para el dominio reprobados.com y su subdominio www.reprobados.com, apuntando hacia la IP de una máquina cliente dentro de una red interna.
+
+Características principales
+
+Instalación automática de BIND9 y herramientas relacionadas (bind9utils, bind9-doc) si no están presentes.
+
+Creación de la zona reprobados.com y configuración de registros A para el dominio y subdominio.
+
+Idempotencia: no sobrescribe configuraciones existentes si el script ya fue ejecutado previamente.
+
+Verificación de la sintaxis de BIND9 y reinicio del servicio automáticamente.
+
+Interfaz sencilla por terminal que solicita únicamente IP del servidor DNS y IP del cliente.
+
+Requisitos
+
+Ubuntu Server (VM1 – Servidor DNS)
+
+Acceso con permisos de sudo
+
+Red interna configurada entre servidor y cliente
